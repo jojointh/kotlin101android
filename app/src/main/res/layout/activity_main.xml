@@ -7,22 +7,9 @@
     android:orientation="vertical"
     tools:context="com.nongmah.kotlin101.MainActivity">
 
-    <EditText
-        android:id="@+id/edtUsername"
-        android:hint="username"
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/edtPassword"
-        android:hint="password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:text="Submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>
