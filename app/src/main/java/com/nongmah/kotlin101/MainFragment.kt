@@ -25,7 +25,18 @@ class MainFragment : Fragment() {
         edtPassword = view.findViewById(R.id.edtPassword)
         btnSubmit = view.findViewById(R.id.btnSubmit)
 
+        btnSubmit.setOnClickListener {
+            val username = edtUsername.toText()
+            val password = edtPassword.toText()
+
+            getMainActivity().changeFragment(SecondFragment.newInstance(username, password))
+        }
+
         return view
+    }
+
+    fun getMainActivity(): MainActivity {
+        return activity as MainActivity
     }
 
     companion object {
@@ -37,4 +48,4 @@ class MainFragment : Fragment() {
         }
     }
 
-}// Required empty public constructor
+}
